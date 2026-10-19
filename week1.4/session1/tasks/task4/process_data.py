@@ -1,11 +1,11 @@
 # Week 4, Session 1
 
 # You are given function process_data with docstring. 
-# Is the function returning the correct value corresponding to the docstring? 
-# Which line of code contains the inconsistency?
+# Is the function returning the correct value corresponding to the docstring? - no
+# Which line of code contains the inconsistency? - line 23
 
-# Your task is to identify the incorrect line of code and
-# update the code to produce the correct output.
+# Your task is to identify the incorrect line of code and - line 23
+# update the code to produce the correct output. - okay
 
 
 def process_data(data):
@@ -20,11 +20,12 @@ def process_data(data):
         int: The sum of all integers in the list or None if empty.
     """
     if not data:
-        return 0
+        return None # changes from 0 to None
     return sum(data)
 
 # What is output from the following line of code?
-print(process_data([1, 2, 3, 4, 5]))  # 15?
+print(process_data([1, 2, 3, 4, 5]))  # 15? - yes 15
 
 # How about this one?
-print(process_data([]))               # None?
+print(process_data([]))               # None? - it was 0 which doesn't align with docstring
+                                      # although I've corrected it and it now outputs None
