@@ -1,12 +1,36 @@
 # Worksheet 1.3: Task 3
 
 # Your code for the overall grade classification
-
+import os
+os.chdir('/workspaces/comp1850semester-1/week1.3/worksheet/task3')
 # ask for filename of the student file
-
+fileName = input('What is the filename of the student file? ')
 # open the file
+with open(fileName, 'r') as file:
+    for line in file:
+        data = [line.strip().split(',') for line in data]
+        L = len(data)
+        for x in range (1,L):
+            total = total + x
+            mean = total / L
+            classification = ''
+            if mean >= 70 :
+                classification = '1'
+            elif 70 < mean >= 60 :
+                classification = '2:1'
+            elif 60 < mean >=  50:
+                classification = '2:2'
+            elif 50 < mean >= 40 :
+                classification = '3'
+            else:
+                classification = 'F'
+            calculatedData = (f'{data[0]},{mean:.2f},{classification}')
+            with open (f'{fileName}_out.csv', 'w') as outfile:
+                outfile.write(calculatedData)        
 
-# read in the data, and for each student calculate their average grade and classification
+    
+
+    # read in the data, and for each student calculate their average grade and classification
 
 
 
