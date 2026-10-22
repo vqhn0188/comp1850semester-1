@@ -21,7 +21,15 @@ def digits_sum(number):
     # base case
 
     # recursive case
-
+    if number < 1:
+        return None
+    elif not isinstance(number, int):
+        return None
+    digits = [int(d) for d in str(number)]
+    sum = 0
+    for digit in digits:
+        sum = sum + digit
+    return sum
 
 # check if correct output is produced
 print(digits_sum(987))  # Output: 24
@@ -29,3 +37,4 @@ print(digits_sum(12345))  # Output: 15
 
 
 # Once completed, your next task is to write an equivalent function that uses loops.
+

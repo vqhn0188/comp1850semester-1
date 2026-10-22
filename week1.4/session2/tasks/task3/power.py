@@ -9,6 +9,10 @@ def power(x, n):
     # base case
 
     # recursive case
-
-
+    if n <= 1 :
+        return 
+    x*x
+    y = power(x, n - 1)
+    return y
+print(power(2, 3))
 # Once completed, make at least two function calls to test the power function
