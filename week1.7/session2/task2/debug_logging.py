@@ -16,13 +16,13 @@ def calculate_average(scores):
     total_assignments = len(scores)
     
     # add debug logging here
-    
-    average = total_score // total_assignments
+    logger.debug(f'Total score is {total_score} and total assignments is {total_assignments}')
+    average = total_score / total_assignments # was using the wrong divisor
     
     # add a debug logging here
-    
+    logger.debug(f'The average is {average}')
     return round(average,2)
 
 print(calculate_average([85, 90, 88]))
-# Expected Output: 87.67
+# Expected Output: 87.67  
 # Actual Output:   87.0
